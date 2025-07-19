@@ -3,7 +3,11 @@ from aiogram import Bot, Dispatcher, types, executor
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-API_TOKEN = '7784449776:AAEdWaXjO1AefXlsSHrhbzVUP6WnrZObuKo'  # Update this line with your bot token
+import os
+from dotenv import load_dotenv
+load_dotenv()
+API_TOKEN = os.getenv("TELEGRAM_TOKEN")
+# Update this line with your bot token
 
 # Google Sheets settings
 scope = [
